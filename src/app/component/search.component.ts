@@ -28,7 +28,6 @@ export class SearchComponent implements OnInit {
   onSubmit() {
     //console.log(this.search);
 
-
     this.os.searchOvertredingstraat().subscribe(data => {
       this.overtredingen = data.filter(x => x.opnameplaats_straat === this.search.value.name);
     })

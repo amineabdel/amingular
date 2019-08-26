@@ -14,6 +14,7 @@ export class OvertredingComponent implements OnInit {
 
   ngOnInit() {
     this.os.getAllOvertreding().subscribe(data => {
+      //console.log(data[0].opnameplaats_straat);
       this.overtredingen = data;
     });
   }

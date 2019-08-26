@@ -7,15 +7,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { OvertredingService } from './service/overtreding.service';
 import { OvertredingComponent } from './component/overtreding.component';
+import { SearchComponent } from './component/search.component';
+
 
 const appRoutes: Routes = [
-  { path: "**", component: OvertredingComponent }
+  { path: "list", component: OvertredingComponent },
+  { path: "search", component: SearchComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    OvertredingComponent
+    OvertredingComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

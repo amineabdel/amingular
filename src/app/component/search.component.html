@@ -1,0 +1,46 @@
+<div>
+    <h1>Amine abdelfettah el azimani</h1>
+    <h2> zoeken op 'opnameplaats_straat': exacte term </h2>
+    <form (ngSubmit)='onSubmit()'>
+
+        <div class='form-group' [formGroup]='search'>
+            <label for='name'>Name :</label>&nbsp;&nbsp;
+            <input type='text' formControlName='name'>
+        </div>
+        <br />
+        <button type='submit' class='btn btn-success'>Search</button>
+
+    </form>
+</div>
+<br>
+<div>
+    <p>'opnameplaats_straat': exacte term: </p>
+    <div *ngFor="let ov of overtredingen">
+        <p>id: {{ov.id}}</p>
+        <p>datum_vaststelpng_jaar: {{ov.datum_vaststelpng_jaar}}</p>
+        <p>datum_vaststelpng_jaar: {{ov.datum_vaststelpng_maand}}</p>
+        <p>datum_vaststelpng: {{ov.datum_vaststelpng}}</p>
+        <p>opnameplaats_straat: {{ov.opnameplaats_straat}}</p>
+        <p>opnameplaats_rijrichting_gaand: {{ov.opnameplaats_rijrichting_gaand}}</p>
+        <p>opnameplaats_zone_snelheid: {{ov.opnameplaats_zone_snelheid}}</p>
+        <p>aantal_passanten: {{ov.aantal_passanten}}</p>
+        <p>aantal_overtredingen_snelheid: {{ov.aantal_overtredingen_snelheid}}</p>
+        <p>aantal_overtredingen_roodpcht: {{ov.aantal_overtredingen_roodpcht}}</p>
+        <br>
+    </div>
+
+
+</div>
+<br>
+<div>
+    <h1>Amine abdelfettah el azimani</h1>
+    <h2> zoeken op 'aantal_overtredingen_snelheid': minimum gebruikt (dus meer dan of gelijk aan) </h2>
+    <form class="form" (ngSubmit)="onSubmit2()">
+        <input type="text" name="search" [(ngModel)]="search" placeholder="search">
+        <input type="submit" value="submit" class="btn">
+    </form>
+</div>
+<br>
+<div>
+    <p>'opnameplaats_straat': 'aantal_overtredingen_snelheid': minimum gebruikt </p>
+</div>
